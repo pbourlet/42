@@ -1,28 +1,29 @@
-
-
-
-
-
-
-
-
-
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/04 12:41:13 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/04 12:41:18 by pbourlet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-		int i;
+	int i;
 
-		i = 0;
-		while (src[i] != '\0' && i < n)
-		{
-				dest[i] = src[i];
-				i++;
-		}
-		while (i < n)
-		{
-				dest[i] = '\0';
-				i++;
-		}
-		return (dest);
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

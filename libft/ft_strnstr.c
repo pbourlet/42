@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:39:59 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 12:40:04 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/04 12:37:18 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/04 14:01:55 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+char	*ft_strnstr(char *str, char *to_find, unsigned int len)
 {
-	int i;
-	int test;
+	unsigned int	l;
+	int				test;
+	int				i;
 
 	i = 0;
-	test = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	l = 0;
+	while (str[i] != '\0' && to_find[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+		if (str[i] != to_find[i] && !(test = 0))
+		{
+			i = 0;
+			str++;
+		}
+		if (str[i] == to_find[i] && to_find[i] != '\0' && (test = 1))
+			i++;
+		l++;
 	}
-	return (s1[i] - s2[i]);
+	if (l >= len)
+		test = 0;
+	if (test == 1 || to_find[0] == '\0')
+		return (str);
+	return ("(null)");
 }

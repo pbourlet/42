@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:39:59 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 12:40:04 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/04 14:35:35 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/04 14:58:08 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+unsigned long int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int i;
-	int test;
+	unsigned int	l;
+	unsigned int	i;
 
+	l = 0;
 	i = 0;
-	test = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while (dest[l] != '\0')
+		l++;
+	while (i < size - 1)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		dest[l] = src[i];
 		i++;
+		l++;
 	}
-	return (s1[i] - s2[i]);
+	dest[l] = '\0';
+	return ((l - 1) + (i - 1));
 }
