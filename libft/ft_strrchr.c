@@ -1,47 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 14:58:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 15:37:43 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/05 17:23:14 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/05 17:26:01 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-char	*ft_strchr(char *s, int c)
+int	ft_strlen(char *str)
 {
 	int i;
-	int test;
-	
 	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c)
-		{
-			i = 0;
-			s++;
-			test = 0;
-		}
-		if (s[i] == c)
-		{
-			test = 1;
-			i++;
-		}
+	while (str[i] != '\0')
+		i++;
+	return (i);
 	}
-	if (test == 1)
-		return (s);
-	return ("(null)");
-}
 
-int		main(void)
+char    *ft_strrchr(char *s, int c)
 {
-	char tab1[20] = "jesuis";
-
-	printf("ft_res: %s\n", ft_strchr(tab1, 'u'));
-	printf("res: %s\n", strchr(tab1, 'u'));
+	int l;
+	l = ft_strlen(s);
+	while (l != 0)
+	{
+		if (s[l] != c)
+			l--;
+		if (s[l] == c)
+			return (s + l);
+	}
+	return ("(null)");
 }
