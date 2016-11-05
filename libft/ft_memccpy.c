@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 18:06:15 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/05 18:13:27 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/05 21:05:48 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		}
 		i++;
 	}
-	return ("NULL");
+	return (NULL);
 }
