@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:39:48 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:14:18 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/06 20:32:10 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/06 22:18:25 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strcat(char *dest, const char *src)
+int	ft_strlen(char *str)
 {
-	int		i;
-	int		len;
+	int i;
 
 	i = 0;
-	len = 0;
-	while (dest[len] != '\0')
-		len++;
-	while (src[i] != '\0')
-	{
-		dest[len + i] = src[i];
+	while (str[i] != '\0')
 		i++;
+	return (i);
+}
+
+char	*ft_strtrim(char const *s)
+{
+	char	*cpy;
+	int	i;
+	int	y;
+
+	i = 0;
+	y = 0;
+	cpy = malloc(ft_strlen((char *)s));
+	while (s[y] != '\0')
+	{
+		if (!(s[y] == ' ' || s[y] == '\n' || s[y] == '\t'))
+		{
+			cpy[i] = s[y];
+			i++;
+		}
+		y++;
 	}
-	dest[len + i] = '\0';
-	return (dest);
+	return (cpy);
 }

@@ -6,9 +6,11 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 14:58:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 15:37:43 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/06 22:14:27 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(char *s, int c)
 {

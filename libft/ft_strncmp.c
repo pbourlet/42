@@ -6,17 +6,17 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:41:02 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 12:41:07 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/06 22:28:44 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int		ft_strncmp(char *s1, char *s2, size_t n)
 {
-	int i;
-	int test;
+	size_t	i;
 
 	i = 0;
-	test = 0;
 	while (s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
 	{
 		if (s1[i] != s2[i])

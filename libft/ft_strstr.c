@@ -6,31 +6,33 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:37:45 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 15:32:51 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/06 22:34:45 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+#include "libft.h"
+
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int test;
 
 	i = 0;
-	while (str[i] != '\0' && to_find[i] != '\0')
+	while (haystack[i] != '\0' && needle[i] != '\0')
 	{
-		if (str[i] != to_find[i])
+		if (haystack[i] != needle[i])
 		{
 			i = 0;
-			str++;
+			haystack++;
 			test = 0;
 		}
-		if (str[i] == to_find[i] && to_find[i] != '\0')
+		if (haystack[i] == needle[i])
 		{
 			test = 1;
 			i++;
 		}
 	}
 	if (test == 1)
-		return (str);
+		return ((char *)haystack);
 	return ("(null)");
 }

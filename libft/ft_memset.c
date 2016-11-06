@@ -6,9 +6,11 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 17:41:58 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/05 21:05:14 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/06 22:12:53 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

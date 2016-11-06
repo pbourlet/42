@@ -6,9 +6,11 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:37:18 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 14:01:55 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/06 22:17:46 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(char *str, char *to_find, unsigned int len)
 {

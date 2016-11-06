@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:39:48 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:14:18 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/06 18:29:53 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/06 22:18:16 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	int		len;
+	char	*tronc;
+	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (dest[len] != '\0')
-		len++;
-	while (src[i] != '\0')
+	tronc = malloc(len - start);
+	if (tronc == NULL)
+		return ("(null)");
+	while (i <= len && s[start + i] != '\0')
 	{
-		dest[len + i] = src[i];
+		tronc[i] = s[start + i];
 		i++;
 	}
-	dest[len + i] = '\0';
-	return (dest);
+	tronc[i] = '\0';
+	return (tronc);
 }

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:39:48 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:14:18 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/06 11:45:56 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/06 22:11:38 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+void	*ft_memalloc(size_t size)
 {
-	int		i;
-	int		len;
+	void	*mem;
+	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (dest[len] != '\0')
-		len++;
-	while (src[i] != '\0')
+	mem = malloc(size);
+	if (mem == NULL || size == 0)
+		return (NULL);
+	while (i < size)
 	{
-		dest[len + i] = src[i];
+		mem[i] = 0;
 		i++;
 	}
-	dest[len + i] = '\0';
-	return (dest);
+	return (mem);
 }

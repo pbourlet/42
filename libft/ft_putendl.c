@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 12:39:48 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:14:18 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/06 20:57:20 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/06 22:13:16 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strcat(char *dest, const char *src)
+void	ft_putchar(char c)
 {
-	int		i;
-	int		len;
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int i;
 
 	i = 0;
-	len = 0;
-	while (dest[len] != '\0')
-		len++;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[len + i] = src[i];
+		ft_putchar(str[i]);
 		i++;
 	}
-	dest[len + i] = '\0';
-	return (dest);
+}
+
+void	ft_putendl(char const *s)
+{
+	ft_putstr((char *)s);
+	ft_putchar('\n');
 }

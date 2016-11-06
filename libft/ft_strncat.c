@@ -6,14 +6,16 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 14:12:21 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/04 14:34:53 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/06 22:36:03 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strncat(char *dest, const char *src, unsigned int n)
+#include "libft.h"
+
+char    *ft_strncat(char *dest, const char *src, size_t n)
 {
-	int     i;
-	int     len;
+	size_t	i;
+	int	len;
 	
 	i = 0;
 	len = 0;
@@ -26,5 +28,4 @@ char    *ft_strncat(char *dest, const char *src, unsigned int n)
 	}
 	dest[len + i] = '\0';
 	return (dest);
-}
 }
