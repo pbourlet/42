@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:37:45 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:34:45 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 22:29:56 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	}
 	if (test == 1)
 		return ((char *)haystack);
-	return ("(null)");
+	return (NULL);
 }

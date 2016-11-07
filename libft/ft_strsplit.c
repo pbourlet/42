@@ -6,15 +6,15 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:24:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 19:02:38 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 22:08:18 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_word(char const *str)
+static	int		ft_word(char const *str, char c)
 {
-	int i;
+	int	i;
 	int t;
 	int cpt;
 
@@ -25,9 +25,9 @@ int		ft_word(char const *str)
 		return (0);
 	while (str[i])
 	{
-		while (str[i] > 32 && str[i] != '\0' && (t = 1))
+		while (str[i] != c && str[i] != '\0' && (t = 1))
 			i++;
-		if (str[i] <= 32)
+		if (str[i] == c)
 		{
 			cpt += (t == 1);
 			t = 0;
@@ -37,12 +37,12 @@ int		ft_word(char const *str)
 	return (cpt);
 }
 
-int		wlen(char const *str, int i)
+static	int		wlen(char const *str, int i, char c)
 {
 	int len;
 
 	len = 0;
-	while (str[i] > 32 && str[i])
+	while (str[i] != c && str[i])
 	{
 		len++;
 		i++;
@@ -50,7 +50,7 @@ int		wlen(char const *str, int i)
 	return (len);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		i;
@@ -59,15 +59,16 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(tab = malloc(ft_word(s) + 1)))
+	if (!(tab = malloc(sizeof(char *) * (ft_word(s, c) + 1))))
 		return (NULL);
-	while (s[i] && j <= ft_word(s))
+	while (s[i] != '\0' && j <= ft_word(s, c))
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
-		if (s[i] && !(l = 0))
+		if (s[i] != '\0' && !(l = 0))
 		{
-			if (!(tab[j] = malloc(wlen(s, i) + 1)))
+			if (!(tab[j] = (char *)malloc(sizeof(char *) *
+							(wlen(s, i, c) + 1))))
 				return (NULL);
 			while (s[i] != c && s[i] != '\0')
 				tab[j][l++] = s[i++];
@@ -76,9 +77,4 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	tab[j] = NULL;
 	return (tab);
-}
-
-int		main(int ac, char **av)
-{
-	
 }

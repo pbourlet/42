@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:57:20 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 13:22:02 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 23:05:25 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	write(1, &s, i);
+	write(1, "\n", 1);
 }
