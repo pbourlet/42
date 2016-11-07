@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:32:10 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 13:14:51 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 14:20:09 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strtrim(char const *s)
 {
 	char	*cpy;
-	int	i;
-	int	y;
+	int		i;
+	int		y;
 
 	i = 0;
 	y = 0;

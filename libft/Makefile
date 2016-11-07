@@ -21,7 +21,7 @@ SRC =	ft_isprint.c ft_memmove.c ft_putstr_fd.c ft_strdup.c ft_strmap.c \
 	ft_strcmp.c ft_strjoin.c ft_strncpy.c ft_strtrim.c ft_isascii.c \
 	ft_memcpy.c ft_putnbr.c ft_strcpy.c ft_strlcat.c ft_strnequ.c \
 	ft_tolower.c ft_isdigit.c ft_memdel.c ft_putnbr_fd.c ft_strdel.c \
-	ft_strlen.c ft_strnew.c ft_toupper.c
+	ft_strlen.c ft_strnew.c ft_toupper.c ft_nblen.c
 
 OBJ =	ft_isprint.o ft_memmove.o ft_putstr_fd.o ft_strdup.o ft_strmap.o \
 	ft_strnstr.o ft_atoi.o ft_memalloc.o ft_memset.o ft_strcat.o \
@@ -32,7 +32,7 @@ OBJ =	ft_isprint.o ft_memmove.o ft_putstr_fd.o ft_strdup.o ft_strmap.o \
 	ft_strcmp.o ft_strjoin.o ft_strncpy.o ft_strtrim.o ft_isascii.o \
 	ft_memcpy.o ft_putnbr.o ft_strcpy.o ft_strlcat.o ft_strnequ.o \
 	ft_tolower.o ft_isdigit.o ft_memdel.o ft_putnbr_fd.o ft_strdel.o \
-	ft_strlen.o ft_strnew.o ft_toupper.o
+	ft_strlen.o ft_strnew.o ft_toupper.o ft_nblen.o
 
 all: $(NAME)
 

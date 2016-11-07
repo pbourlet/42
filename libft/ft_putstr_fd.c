@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 21:22:08 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 12:43:59 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 14:13:06 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char const *str, int fd)
 {
 	int i;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{

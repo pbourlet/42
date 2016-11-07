@@ -6,16 +6,16 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 18:24:02 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:18:59 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 14:19:43 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t	i;
-	int	lex;
+	int		lex;
 
 	i = 0;
 	lex = 0;

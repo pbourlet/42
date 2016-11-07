@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_nblen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 17:36:06 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 14:15:52 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/07 17:13:24 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/07 17:13:28 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int		ft_nblen(int nb)
 {
-	char	*frais;
-	int		i;
+	double	diz;
+	int		nd;
+	int		neg;
 
-	i = 0;
-	frais = malloc(ft_strlen(s));
-	while (s[i] != '\0')
+	nd = 0;
+	neg = 0;
+	diz = 1;
+	if (nb == -2147483648)
+		return (11);
+	if (nb < 0)
 	{
-		frais[i] = f(i, s[i]);
-		i++;
+		neg = 1;
+		nb = -nb;
 	}
-	return (frais);
+	while (diz < nb)
+	{
+		diz = diz * 10;
+		nd++;
+	}
+	return (nd + neg);
 }

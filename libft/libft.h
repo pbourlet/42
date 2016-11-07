@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 22:07:15 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 13:31:38 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 16:04:04 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_nblen(int nb);
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memalloc(size_t size);
@@ -70,6 +71,5 @@ char	*ft_strtrim(char const *s);
 
 size_t	ft_strlcat(char *dst, char *src, size_t size);
 size_t	ft_strlen(const char *s);
-
 
 #endif
