@@ -6,14 +6,13 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:40:18 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:15:06 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 12:53:26 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
 	int		i;
 	int		len;
@@ -21,14 +20,14 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	len = 0;
-	while (s[len] != '\0')
+	while (s1[len] != '\0')
 	{
 		len++;
 	}
 	str = (char *)malloc(sizeof((*str) * (len)));
 	while (i < len)
 	{
-		str[i] = s[i];
+		str[i] = s1[i];
 		i++;
 	}
 	str[i] = '\0';

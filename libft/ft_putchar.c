@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 20:32:10 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 13:14:51 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/07 12:34:50 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/07 12:36:12 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+void	ft_putchar(char c)
 {
-	char	*cpy;
-	int	i;
-	int	y;
-
-	i = 0;
-	y = 0;
-	cpy = malloc(ft_strlen(s));
-	while (s[y] != '\0')
-	{
-		if (!(s[y] == ' ' || s[y] == '\n' || s[y] == '\t'))
-		{
-			cpy[i] = s[y];
-			i++;
-		}
-		y++;
-	}
-	return (cpy);
+	write(1, &c, 1);
 }

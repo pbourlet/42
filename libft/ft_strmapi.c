@@ -6,22 +6,11 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 17:36:06 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:16:32 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 13:01:24 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-int	ft_strlen(char *str)
-{
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

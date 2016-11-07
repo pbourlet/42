@@ -6,17 +6,17 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:37:18 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:17:46 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 13:29:26 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *str, char *to_find, unsigned int len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	unsigned int	l;
-	int				test;
-	int				i;
+	size_t	l;
+	int		test;
+	int		i;
 
 	i = 0;
 	l = 0;
@@ -34,6 +34,6 @@ char	*ft_strnstr(char *str, char *to_find, unsigned int len)
 	if (l >= len)
 		test = 0;
 	if (test == 1 || to_find[0] == '\0')
-		return (str);
+		return ((char *)str);
 	return ("(null)");
 }

@@ -6,17 +6,11 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 21:02:38 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:13:37 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 12:42:38 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_putnbr(int n)
 {

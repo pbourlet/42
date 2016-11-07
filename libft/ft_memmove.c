@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 20:26:18 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/06 22:12:43 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/07 12:21:13 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const void	*tmp;
-	size_t		i;
+	int		*d;
+	int		*s;
+	size_t	i;
 
 	i = 0;
+	d = (int *)dest;
+	s = (int *)src;
 	while (i < n)
 	{
-		tmp[i] = src[i];
-		dest[i] = tmp[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dest);
