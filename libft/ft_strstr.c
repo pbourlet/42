@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:37:45 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 22:29:56 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/08 19:10:22 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int test;
 
 	i = 0;
-	while (haystack[i] != '\0' && needle[i] != '\0')
+	if (needle[i] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] && needle[i])
 	{
 		if (haystack[i] != needle[i])
 		{

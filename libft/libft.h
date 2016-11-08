@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 22:07:15 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 22:41:51 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/08 20:52:51 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 
-size_t	ft_strlcat(char *dst, char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 
 #endif

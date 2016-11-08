@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:43:25 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 23:04:14 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/08 15:49:14 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_itoa(int n)
 	neg = 0;
 	len = ft_nblen(n);
 	l = len;
-	if (!(tab = malloc((len + 1))))
+	if (!(tab = (char *)malloc(sizeof((*tab) * (len + 1)))))
 		return (NULL);
 	if (n == -2147483648)
 		return ("-2147483648");

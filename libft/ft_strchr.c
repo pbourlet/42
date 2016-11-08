@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 14:58:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 14:14:23 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/08 19:12:26 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ char	*ft_strchr(char *s, int c)
 		if (s[0] == c)
 			return (s);
 	}
-	return ("(null)");
+	return (NULL);
 }

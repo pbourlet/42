@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 21:02:38 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 22:21:15 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/08 16:23:21 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	ft_putnbr(int n)
 {
 	if (n < 0)
 	{
-		ft_putchar('-');
+		ft_putchar_fd('-', 1);
 		if (n == -2147483648)
 		{
-			ft_putchar('2');
+			ft_putchar_fd('2', 1);
 			n = -147483648;
 		}
 		n = -n;
@@ -30,5 +30,5 @@ void	ft_putnbr(int n)
 		ft_putnbr(n % 10);
 	}
 	else
-		ft_putchar(n + 48);
+		ft_putchar_fd(n + 48, 1);
 }
