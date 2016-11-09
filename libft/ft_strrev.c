@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:21:24 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/09 21:46:31 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/09 16:59:58 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/09 17:00:14 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strrev(char *str)
 {
-	int	i;
+	int		l;
+	int		i;
+	char	tmp;
 
-	if (!s)
-		return ;
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = -1;
+	l = 0;
+	while (str[l] != '\0')
+		l++;
+	while (++i < --l)
 	{
-		s[i] = '\0';
-		i--;
+		tmp = str[i];
+		str[i] = str[l];
+		str[l] = tmp;
 	}
+	return (str);
 }

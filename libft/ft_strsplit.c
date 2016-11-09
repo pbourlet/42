@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:24:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/08 15:22:05 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/09 22:27:16 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(tab = malloc(sizeof(char *) * (ft_word(s, c) + 1))))
+	if (!(tab = malloc(sizeof(char *) * (ft_word(s, c) + 1))) || !s)
 		return (NULL);
 	while (s[i] != '\0' && j <= ft_word(s, c))
 	{

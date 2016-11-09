@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:32:10 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 14:20:09 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/09 22:23:38 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,21 @@ char	*ft_strtrim(char const *s)
 	char	*cpy;
 	int		i;
 	int		y;
+	int		len;
 
-	i = 0;
+	i = -1;
 	y = 0;
-	cpy = malloc(ft_strlen(s));
-	while (s[y] != '\0')
-	{
-		if (!(s[y] == ' ' || s[y] == '\n' || s[y] == '\t'))
-		{
-			cpy[i] = s[y];
-			i++;
-		}
-		y++;
-	}
+	if (!s)
+		return (NULL);
+	len = ft_strlen(s);
+	while (s[len - 1] == ' ' || s[len - 1] == '\n' || s[len - 1] == '\t')
+		len--;
+	while (s[++i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		len--;
+	if (len <= 0 || !s)
+		len = 0;
+	if (!(cpy = (char *)malloc(sizeof(char *) * (len + 1))))
+		return (NULL);
+	cpy = ft_strsub(s, i, len);
 	return (cpy);
 }

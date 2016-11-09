@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 12:17:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/07 12:51:56 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/09 19:21:06 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,7 @@
 
 void	ft_strdel(char **as)
 {
-	int i;
-
-	i = 0;
-	while (as[i] != '\0')
-	{
-		free(as[i]);
-		as[i] = NULL;
-		i++;
-	}
-	free(as);
-	as = NULL;
+	if (!as)
+		return ;
+	ft_memdel((void **)as);
 }

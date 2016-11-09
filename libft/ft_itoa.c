@@ -6,37 +6,38 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:43:25 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/08 15:49:14 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/09 20:08:37 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <time.h>
 
 char	*ft_itoa(int n)
 {
-	char	*tab;
+	char	*str;
+	long	nb;
 	int		i;
 	int		len;
-	int		neg;
-	int		l;
 
 	i = 0;
-	neg = 0;
-	len = ft_nblen(n);
-	l = len;
-	if (!(tab = (char *)malloc(sizeof((*tab) * (len + 1)))))
+	nb = n;
+	if (n < 0)
+		nb = -nb;
+	len = ft_nblen(nb);
+	if (!(str = (char *)malloc(sizeof(char) * (len + 1 + (n < 0)))))
 		return (NULL);
-	if (n == -2147483648)
-		return ("-2147483648");
-	if (n < 0 && (neg = 1))
-		n = -n;
-	while (len--)
+	if (nb == 0)
+		return ("0");
+	while (nb != 0)
 	{
-		tab[len] = n % 10 + 48;
-		n = n / 10;
+		str[i] = (nb % 10) + '0';
+		nb = nb / 10;
+		i++;
 	}
-	if (neg == 1)
-		tab[0] = '-';
-	tab[l] = '\0';
-	return (tab);
+	if (n < 0)
+		str[i++] = '-';
+	str[i] = '\0';
+	str = ft_strrev(str);
+	return (str);
 }
