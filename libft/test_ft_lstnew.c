@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   test_ft_lstnew.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 17:42:53 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/10 15:42:16 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/10 16:43:23 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/10 17:21:32 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+void	ft_lstdisp(t_list *a)
 {
-	int lex;
+	if (a)
+	{
+		ft_putendl("\t------------");
+		ft_putendl(a->content);
+		ft_putnbr(a->content_size);
+		ft_putchar('\n');
+		ft_lstdisp(a->next);
+	}
+}
 
-	lex = 0;
-	if (!s1 || !s2)
-		return (0);
-	lex = lex + ft_strcmp(s1, s2);
-	if (lex == 0)
-		return (1);
+int	main(void)
+{
+	char	tab1[30] = "salut";
+	char	tab2[30] = "petite";
+	char	tab3[30] = "merde";
+	
+	ft_lstdisp(ft_lstnew(tab1, ft_strlen(tab1)));
+	ft_lstdisp(ft_lstnew(tab2, ft_strlen(tab2)));
+	ft_lstdisp(ft_lstnew(tab3, ft_strlen(tab3)));
 	return (0);
 }

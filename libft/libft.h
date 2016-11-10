@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 22:07:15 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/09 17:00:49 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/10 17:07:17 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,15 @@ char	*ft_strrev(char *str);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+
+typedef struct		s_list
+{
+	void		*content;
+	size_t		content_size;
+	struct	s_list	*next;
+}			t_list;
+
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 
 #endif
