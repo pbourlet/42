@@ -6,12 +6,11 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:43:25 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/09 20:08:37 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/14 17:08:49 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <time.h>
 
 char	*ft_itoa(int n)
 {

@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/14 10:15:57 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/14 12:52:56 by pbourlet         ###   ########.fr       */
+/*   Created: 2016/11/14 13:06:26 by pbourlet          #+#    #+#             */
+/*   Updated: 2016/11/14 16:49:56 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*tmp;
+	t_list	*deb;
+	t_list	*frais;
+	t_list	*nxtlst;
 
-	tmp = *alst;
-	*alst = new;
-	new->next = tmp;
+	if (!lst)
+		return (NULL);
+	deb = f(ft_lstnew(lst, lst->content_size));
+	frais = deb;
+	nxtlst = deb;
+	while (lst)
+	{
+		frais = f(ft_lstnew(lst, lst->content_size));
+		nxtlst->next = frais;
+		nxtlst = frais;
+		lst = lst->next;
+	}
+	return (deb);
 }

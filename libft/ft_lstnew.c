@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 14:11:37 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/10 19:42:17 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/14 09:51:32 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		if (!(frais->content = malloc(content_size)))
 		{
-			free (frais);
+			free(frais);
 			return (NULL);
 		}
 		ft_memcpy((frais->content), content, content_size);
