@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:37:18 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/14 20:18:04 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/14 23:10:57 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t	l;
-	char	*buf;
+	size_t				l;
+	unsigned	char	*ss;
 
-	l = ft_strlen(to_find);
-	buf = ft_strdup((char *)str);
-	if (to_find == '\0')
+	if (ft_strcmp(to_find, "") == 0)
 		return ((char *)str);
-	while (buf != 0 && to_find != '\0' && len >= l)
+	ss = (unsigned char *)str;
+	l = ft_strlen(to_find);
+	while (*ss != '\0' && len-- >= l)
 	{
-		if (ft_memcmp(buf, to_find, l) == 0)
-			return ((char *)buf);
-		buf++;
-		len--;
+		if (*ss == *to_find && ft_memcmp(ss, to_find, l) == 0)
+			return ((char *)ss);
+		ss++;
 	}
 	return (NULL);
 }

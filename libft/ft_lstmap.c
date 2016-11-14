@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 13:06:26 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/14 16:49:56 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/14 22:26:29 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	deb = f(ft_lstnew(lst, lst->content_size));
 	frais = deb;
 	nxtlst = deb;
+	lst = lst->next;
 	while (lst)
 	{
 		frais = f(ft_lstnew(lst, lst->content_size));

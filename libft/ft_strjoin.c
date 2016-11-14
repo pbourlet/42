@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:10:19 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/09 18:16:41 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/14 22:50:34 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		y;
 	int		len;
 
-	i = 0;
 	y = 0;
+	if ((i = 0) && ft_strcmp(s1, "") == 0)
+		return ((char *)s1);
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
