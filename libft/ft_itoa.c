@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:43:25 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/14 17:08:49 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/15 16:03:57 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1 + (n < 0)))))
 		return (NULL);
 	if (nb == 0)
-		return ("0");
+		return (ft_strcpy(str, "0"));
 	while (nb != 0)
 	{
 		str[i] = (nb % 10) + '0';
