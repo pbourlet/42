@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 22:07:15 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/14 13:13:15 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/16 15:15:46 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_nblen(int nb);
+int					ft_recursive_power(int nb, int power);
+int					ft_sqrt(int nb);
 
 void				ft_bzero(void *s, size_t n);
 void				*ft_memalloc(size_t size);
@@ -72,6 +74,7 @@ char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strrev(char *str);
+char				**ft_split_whitespaces(char *s);
 
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
