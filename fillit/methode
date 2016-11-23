@@ -1,0 +1,23 @@
+METHODE (bordelique pour l'instant) :
+
+1 - prendre tetri n1
+2 - prendre tetri n2
+3 - mettre 2 a droite de 1								##
+	a - si taille <= 2 (le plus petit possible c'est le	## )
+		-> ajouter tetri n3
+	b - mettre en dessous
+		->essayer toutes les positions
+	c - si ca marche pas, recommencer avec taille <= 3
+4 - Des qu'on ajoute un tetri, on essaye de le faire tenir dans la meme taille,
+si on y arrive pas... on recommence de zero avec taille++ !
+
+Protocole de resolution:
+1 - prendre tetri n1
+2 - calculer sa taille en long et en large
+3 - prendre n2 et calculer sa taille en long et en large
+4 - faire estimation de la taille totale
+5 - mettre n2 soit a droite soit en dessous
+	. A A	    A A B B
+1)	B B A    2)	. A B B
+	B B A       . A . .
+6 - ainsi de suite..? 
