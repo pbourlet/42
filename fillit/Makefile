@@ -6,7 +6,7 @@
 #    By: pguillie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/14 13:37:13 by pguillie          #+#    #+#              #
-#*   Updated: 2016/11/28 15:21:17 by pbourlet         ###   ########.fr       *#
+#*   Updated: 2016/11/28 15:16:47 by pbourlet         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = fillit
 SRCF = 	\
 		main.c \
 		ft_check.c \
+		ft_checkbeside.c\
 		ft_errors.c \
 		ft_solve.c\
 		ft_space.c\
@@ -25,17 +26,27 @@ SRCF = 	\
 		ft_init.c \
 
 SRCL = \
-	   ft_sqrt.c\
-	   ft_putendl.c\
-	   ft_strnew.c\
-	   ft_memset.c\
-	   ft_strdup.c\
-	   ft_strcpy.c\
-	   ft_putchar.c\
-	   ft_putstr.c\
-	   ft_putnbr.c\
+	   libft/ft_putendl.c\
+	   libft/ft_sqrt.c\
+	   libft/ft_strnew.c\
+	   libft/ft_memset.c\
+	   libft/ft_strdup.c\
+	   libft/ft_strcpy.c\
+	   libft/ft_putchar.c\
+	   libft/ft_putstr.c\
+	   libft/ft_strclr.c\
 
-OBJ = 	$(SRCF:.c=.o) $(SRCL:.c=.o)
+OBJ = \
+	  $(SRCF:.c=.o)\
+	  ft_putendl.o\
+	  ft_sqrt.o\
+	  ft_strnew.o\
+	  ft_memset.o\
+	  ft_strdup.o\
+	  ft_strcpy.o\
+	  ft_putchar.o\
+	  ft_putstr.o\
+	  ft_strclr.o\
 
 all: $(NAME)
 

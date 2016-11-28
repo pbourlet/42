@@ -6,11 +6,10 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 15:10:42 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/26 15:36:39 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:31:35 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 char	*ft_init(int size)
@@ -26,4 +25,3 @@ char	*ft_init(int size)
 	str[i] = '\0';
 	return (str);
 }
-

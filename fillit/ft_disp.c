@@ -6,11 +6,10 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 11:23:11 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/26 12:30:25 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:30:55 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 void	ft_disp(char *s, int n)

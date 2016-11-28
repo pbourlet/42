@@ -6,11 +6,10 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 10:21:43 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/28 13:24:22 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:37:37 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 int		ft_count(char *map, int n)

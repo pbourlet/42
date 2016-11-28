@@ -6,11 +6,10 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 11:53:55 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/28 13:24:03 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:37:14 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 int		ft_solve(char **tetri, char *sol, int size)

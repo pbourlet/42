@@ -6,11 +6,10 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 12:14:39 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/28 15:14:09 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:33:06 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 int		main(int ac, char **av)
@@ -31,10 +30,7 @@ int		main(int ac, char **av)
 	end = 0;
 	size = ft_sizemin(tetriminos);
 	while (!end)
-	{
-		ft_memset(solution, '.', 1764);
 		end = ft_solve(tetriminos, solution, size++);
-	}
 	ft_disp(solution, size - 1);
 	free(tetriminos);
 	free(solution);

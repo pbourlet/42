@@ -6,11 +6,10 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:31:55 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/25 12:50:27 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:30:10 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 void	ft_append(char *map, char *tetri, int pos)

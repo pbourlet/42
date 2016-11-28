@@ -6,11 +6,10 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 13:12:01 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/28 13:15:09 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/28 17:36:33 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "fillit.h"
 
 int		ft_sizemin(char **t)
