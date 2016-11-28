@@ -6,7 +6,7 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 14:52:15 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/16 14:53:37 by pbourlet         ###   ########.fr       */
+/*   Updated: 2016/11/28 14:31:44 by pbourlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ int		ft_sqrt(int nb)
 	int sqrt;
 
 	r = 1;
-	if (nb == 1)
-		return (nb);
-	while (r < nb)
+	while (r <= nb)
 	{
 		sqrt = r * r;
 		if (sqrt == nb)
