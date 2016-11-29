@@ -6,13 +6,13 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 16:26:54 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/28 17:30:28 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:36:10 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char	**ft_empty(char **t, char *buf)
+static char	**ft_empty(char **t, char *buf)
 {
 	int		i;
 
@@ -24,7 +24,7 @@ char	**ft_empty(char **t, char *buf)
 	return (t);
 }
 
-char	*ft_create(char *s)
+static char	*ft_create(char *s)
 {
 	char	*t;
 	int		i;
@@ -46,7 +46,7 @@ char	*ft_create(char *s)
 	return (t);
 }
 
-char	*ft_convert(char *s, char l)
+static char	*ft_convert(char *s, char l)
 {
 	char	*tetri;
 	int		i;
@@ -72,7 +72,7 @@ char	*ft_convert(char *s, char l)
 	return (tetri);
 }
 
-char	**ft_check(int fd)
+char		**ft_check(int fd)
 {
 	char	**tab;
 	char	*buffer;

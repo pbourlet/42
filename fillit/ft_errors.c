@@ -6,14 +6,14 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 10:21:27 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/28 17:31:21 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:29:07 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void	ft_errors(char *msg)
+void	ft_errors(char *msg, int fd)
 {
-	ft_putendl(msg);
+	ft_putendl_fd(msg, fd);
 	exit(EXIT_FAILURE);
 }

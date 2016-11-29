@@ -6,13 +6,13 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 15:54:04 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/28 17:30:40 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:38:15 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_beside(char *s, int i)
+static int	ft_beside(char *s, int i)
 {
 	int		blocks;
 
@@ -40,7 +40,7 @@ int		ft_beside(char *s, int i)
 	return (blocks);
 }
 
-int		ft_checkbeside(char *t)
+int			ft_checkbeside(char *t)
 {
 	int		i;
 	int		b;

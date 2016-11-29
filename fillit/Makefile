@@ -27,6 +27,7 @@ SRCF = 	\
 
 SRCL = \
 	   libft/ft_putendl.c\
+	   libft/ft_putendl_fd.c\
 	   libft/ft_sqrt.c\
 	   libft/ft_strnew.c\
 	   libft/ft_memset.c\
@@ -35,10 +36,12 @@ SRCL = \
 	   libft/ft_putchar.c\
 	   libft/ft_putstr.c\
 	   libft/ft_strclr.c\
+	   libft/ft_strlen.c\
 
 OBJ = \
 	  $(SRCF:.c=.o)\
 	  ft_putendl.o\
+	  ft_putendl_fd.o\
 	  ft_sqrt.o\
 	  ft_strnew.o\
 	  ft_memset.o\
@@ -47,6 +50,7 @@ OBJ = \
 	  ft_putchar.o\
 	  ft_putstr.o\
 	  ft_strclr.o\
+	  ft_strlen.o\
 
 all: $(NAME)
 

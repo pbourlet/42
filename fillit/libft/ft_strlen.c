@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/26 15:10:42 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/29 16:47:38 by pguillie         ###   ########.fr       */
+/*   Created: 2016/11/04 11:40:54 by pguillie          #+#    #+#             */
+/*   Updated: 2016/11/05 15:23:57 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-char	*ft_init(int size)
+size_t	ft_strlen(const char *s)
 {
-	int		i;
-	char	*str;
+	size_t	len;
 
-	i = 0;
-	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i < size)
-		str[i++] = '.';
-	str[i] = '\0';
-	return (str);
+	len = 0;
+	while (s[len++])
+		;
+	return (len - 1);
 }

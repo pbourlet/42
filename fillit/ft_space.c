@@ -6,13 +6,13 @@
 /*   By: pbourlet <pbourlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 10:21:43 by pbourlet          #+#    #+#             */
-/*   Updated: 2016/11/28 17:37:37 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:36:44 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		ft_count(char *map, int n)
+static int	ft_count(char *map, int n)
 {
 	int		i;
 	int		blocks;
@@ -30,7 +30,7 @@ int		ft_count(char *map, int n)
 	return (blocks);
 }
 
-int		ft_space(char *map, char *tetri, int n, int i)
+int			ft_space(char *map, char *tetri, int n, int i)
 {
 	char	*dup;
 	int		before;

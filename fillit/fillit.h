@@ -6,7 +6,7 @@
 /*   By: pguillie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 13:36:05 by pguillie          #+#    #+#             */
-/*   Updated: 2016/11/28 17:54:17 by pguillie         ###   ########.fr       */
+/*   Updated: 2016/11/29 16:29:19 by pguillie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 char	**ft_check(int fd);
 int		ft_checkbeside(char *tetri);
 int		ft_solve(char **tetri, char *sol, int size);
-void	ft_errors(char *s);
+void	ft_errors(char *s, int fd);
 int		ft_space(char *sol, char *tetri, int size, int pos);
 void	ft_append(char *map, char *t, int pos);
 void	ft_erase(char *map, char *t);
